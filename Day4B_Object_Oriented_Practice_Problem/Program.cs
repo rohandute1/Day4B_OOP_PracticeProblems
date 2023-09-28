@@ -15,7 +15,7 @@ namespace Day4B_Object_Oriented_Practice_Problem
             while (continueExecution)
             {
                 Console.WriteLine("Please choose program which you want to perform.");
-                Console.WriteLine("1.Duplicate Counter\n");
+                Console.WriteLine("1.Duplicate Counter\n2.Unique element finder");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -35,6 +35,28 @@ namespace Day4B_Object_Oriented_Practice_Problem
                         int duplicateCount = counter.CountDuplicates();
 
                         Console.WriteLine($"Total number of duplicate elements: {duplicateCount}");
+                        break;
+
+                    case 2:
+                        Console.Write("Enter the number of elements in the array: ");
+                        int num = int.Parse(Console.ReadLine());
+
+                        int[] ar = new int[num];
+                        Console.WriteLine("Enter the elements:");
+
+                        for (int i = 0; i < num; i++)
+                        {
+                            ar[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        UniqueElementsFinder finder = new UniqueElementsFinder();
+                        int[] uniqueElements = finder.FindUniqueElements(ar);
+
+                        Console.WriteLine("Unique elements in the array:");
+                        foreach (int element in uniqueElements)
+                        {
+                            Console.WriteLine(element);
+                        }
                         break;
                 }
                 Console.WriteLine("Do you want to continue (yes or no)");
