@@ -15,7 +15,7 @@ namespace Day4B_Object_Oriented_Practice_Problem
             while (continueExecution)
             {
                 Console.WriteLine("Please choose program which you want to perform.");
-                Console.WriteLine("1.Duplicate Counter\n2.Unique element finder");
+                Console.WriteLine("1.Duplicate Counter\n2.Unique element finder\n3.Frequency counter");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -56,6 +56,32 @@ namespace Day4B_Object_Oriented_Practice_Problem
                         foreach (int element in uniqueElements)
                         {
                             Console.WriteLine(element);
+                        }
+                        break;
+
+                    case 3:
+                        Console.Write("Enter the number of elements in the array: ");
+                        int number = int.Parse(Console.ReadLine());
+
+                        int[] a = new int[number];
+                        Console.WriteLine("Enter the elements of the array:");
+
+                        for (int i = 0; i < number; i++)
+                        {
+                            Console.Write($"Element {i + 1}: ");
+                            a[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        FrequencyCounter count = new FrequencyCounter();
+                        int[] frequencies = count.CountFrequencies(a);
+
+                        Console.WriteLine("\nElement Frequencies:");
+                        for (int i = 0; i < number; i++)
+                        {
+                            if (frequencies[i] != -1)
+                            {
+                                Console.WriteLine($"{a[i]} occurs {frequencies[i]} times.");
+                            }
                         }
                         break;
                 }
