@@ -15,7 +15,11 @@ namespace Day4B_Object_Oriented_Practice_Problem
             while (continueExecution)
             {
                 Console.WriteLine("Please choose program which you want to perform.");
-                Console.WriteLine("1.Duplicate Counter\n2.Unique element finder\n3.Frequency counter");
+                Console.WriteLine("" +
+                    "1.Duplicate Counter\n" +
+                    "2.Unique element finder\n" +
+                    "3.Frequency counter\n" +
+                    "4.Max and Min Finder");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -82,6 +86,33 @@ namespace Day4B_Object_Oriented_Practice_Problem
                             {
                                 Console.WriteLine($"{a[i]} occurs {frequencies[i]} times.");
                             }
+                        }
+                        break;
+
+                    case 4:
+                        Console.Write("Enter the number of elements in the array: ");
+                        int x = int.Parse(Console.ReadLine());
+
+                        int[] array = new int[x];
+                        Console.WriteLine($"Enter {x} elements:");
+
+                        for (int i = 0; i < x; i++)
+                        {
+                            array[i] = int.Parse(Console.ReadLine());
+                        }
+
+                        ArrayMinMaxFinder find = new ArrayMinMaxFinder();
+                        int max = find.FindMax(array);
+                        int min = find.FindMin(array);
+
+                        if (max != int.MinValue)
+                        {
+                            Console.WriteLine($"Maximum element: {max}");
+                        }
+
+                        if (min != int.MaxValue)
+                        {
+                            Console.WriteLine($"Minimum element: {min}");
                         }
                         break;
                 }
