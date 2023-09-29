@@ -19,7 +19,8 @@ namespace Day4B_Object_Oriented_Practice_Problem
                     "1.Duplicate Counter\n" +
                     "2.Unique element finder\n" +
                     "3.Frequency counter\n" +
-                    "4.Max and Min Finder");
+                    "4.Max and Min Finder\n" +
+                    "5.Print reverse right-angled triangle pattern\n" );
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -114,6 +115,14 @@ namespace Day4B_Object_Oriented_Practice_Problem
                         {
                             Console.WriteLine($"Minimum element: {min}");
                         }
+                        break;
+
+                    case 5:
+                        Console.Write("Enter the number of rows: ");
+                        int p = Convert.ToInt32(Console.ReadLine());
+
+                        TriangularPattern patternPrinter = new TriangularPattern();
+                        patternPrinter.PrintPattern(p);
                         break;
                 }
                 Console.WriteLine("Do you want to continue (yes or no)");
