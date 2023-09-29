@@ -22,7 +22,8 @@ namespace Day4B_Object_Oriented_Practice_Problem
                     "4.Max and Min Finder\n" +
                     "5.Print reverse right-angled triangle pattern\n" +
                     "6.Print Hollow-Rectangular Pattern\n" +
-                    "7.Reverse each word of given array" );
+                    "7.Reverse each word of given array\n" +
+                    "8.Calculate sum of all digits of given number");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -147,6 +148,17 @@ namespace Day4B_Object_Oriented_Practice_Problem
 
                         Console.WriteLine("Reversed string:");
                         Console.WriteLine(reversedString);
+                        break;
+
+                    case 8:
+                        Console.Write("Enter a number: ");
+                        int inputNumber = Convert.ToInt32(Console.ReadLine());
+
+                        DigitSumCalculate calculator = new DigitSumCalculate();
+
+                        int sumOfDigits = calculator.CalculateDigitSum(inputNumber);
+
+                        Console.WriteLine($"Sum of digits: {sumOfDigits}");
                         break;
                 }
                 Console.WriteLine("Do you want to continue (yes or no)");

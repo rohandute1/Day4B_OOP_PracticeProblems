@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayMinMaxFinder.cs" />
+    <Compile Include="DigitSumCalculate.cs" />
     <Compile Include="DuplicateCounter.cs" />
     <Compile Include="FrequencyCounter.cs" />
     <Compile Include="Program.cs" />
