@@ -21,7 +21,8 @@ namespace Day4B_Object_Oriented_Practice_Problem
                     "3.Frequency counter\n" +
                     "4.Max and Min Finder\n" +
                     "5.Print reverse right-angled triangle pattern\n" +
-                    "6.Print Hollow-Rectangular Pattern" );
+                    "6.Print Hollow-Rectangular Pattern\n" +
+                    "7.Reverse each word of given array" );
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -135,6 +136,17 @@ namespace Day4B_Object_Oriented_Practice_Problem
 
                         RectangularPattern patternPrint = new RectangularPattern(height, width);
                         patternPrint.PrintPattern();
+                        break;
+
+                    case 7:
+                        Console.WriteLine("Enter a string:");
+                        string input = Console.ReadLine();
+
+                        WordReverser wordReverser = new WordReverser();
+                        string reversedString = wordReverser.ReverseWords(input);
+
+                        Console.WriteLine("Reversed string:");
+                        Console.WriteLine(reversedString);
                         break;
                 }
                 Console.WriteLine("Do you want to continue (yes or no)");

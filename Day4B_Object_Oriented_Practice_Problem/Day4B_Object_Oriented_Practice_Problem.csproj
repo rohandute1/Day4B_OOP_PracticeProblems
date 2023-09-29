@@ -51,6 +51,7 @@
     <Compile Include="RectangularPattern.cs" />
     <Compile Include="TriangularPattern.cs" />
     <Compile Include="UniqueElementsFinder.cs" />
+    <Compile Include="WordReverser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
