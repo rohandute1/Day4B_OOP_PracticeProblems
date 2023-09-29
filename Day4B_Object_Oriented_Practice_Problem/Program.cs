@@ -20,7 +20,8 @@ namespace Day4B_Object_Oriented_Practice_Problem
                     "2.Unique element finder\n" +
                     "3.Frequency counter\n" +
                     "4.Max and Min Finder\n" +
-                    "5.Print reverse right-angled triangle pattern\n" );
+                    "5.Print reverse right-angled triangle pattern\n" +
+                    "6.Print Hollow-Rectangular Pattern" );
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -123,6 +124,17 @@ namespace Day4B_Object_Oriented_Practice_Problem
 
                         TriangularPattern patternPrinter = new TriangularPattern();
                         patternPrinter.PrintPattern(p);
+                        break;
+
+                    case 6:
+                        Console.Write("Enter the height of the pattern: ");
+                        int height = Convert.ToInt32(Console.ReadLine());
+
+                        Console.Write("Enter the width of the pattern: ");
+                        int width = Convert.ToInt32(Console.ReadLine());
+
+                        RectangularPattern patternPrint = new RectangularPattern(height, width);
+                        patternPrint.PrintPattern();
                         break;
                 }
                 Console.WriteLine("Do you want to continue (yes or no)");
