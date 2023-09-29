@@ -16,14 +16,15 @@ namespace Day4B_Object_Oriented_Practice_Problem
             {
                 Console.WriteLine("Please choose program which you want to perform.");
                 Console.WriteLine("" +
-                    "1.Duplicate Counter\n" +
-                    "2.Unique element finder\n" +
-                    "3.Frequency counter\n" +
-                    "4.Max and Min Finder\n" +
-                    "5.Print reverse right-angled triangle pattern\n" +
-                    "6.Print Hollow-Rectangular Pattern\n" +
-                    "7.Reverse each word of given array\n" +
-                    "8.Calculate sum of all digits of given number");
+                    "1.Duplicate Counter.\n" +
+                    "2.Unique element finder.\n" +
+                    "3.Frequency counter.\n" +
+                    "4.Max and Min Finder.\n" +
+                    "5.Print reverse right-angled triangle pattern.\n" +
+                    "6.Print Hollow-Rectangular Pattern.\n" +
+                    "7.Reverse each word of given array.\n" +
+                    "8.Calculate sum of all digits of given number.\n" +
+                    "9.Calculate sun of all row of matrix.");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -159,6 +160,19 @@ namespace Day4B_Object_Oriented_Practice_Problem
                         int sumOfDigits = calculator.CalculateDigitSum(inputNumber);
 
                         Console.WriteLine($"Sum of digits: {sumOfDigits}");
+                        break;
+
+                    case 9:
+                        Console.Write("Enter the number of rows: ");
+                        int rows = int.Parse(Console.ReadLine());
+
+                        Console.Write("Enter the number of columns: ");
+                        int columns = int.Parse(Console.ReadLine());
+
+                        MatrixSumCalculator matrixSumCalculator = new MatrixSumCalculator(rows, columns);
+
+                        matrixSumCalculator.InputMatrix();
+                        matrixSumCalculator.CalculateAndPrintRowSums();
                         break;
                 }
                 Console.WriteLine("Do you want to continue (yes or no)");
